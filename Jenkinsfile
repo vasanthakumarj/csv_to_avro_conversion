@@ -1,5 +1,5 @@
 pipeline {
-	agents any
+	agent any
 	environment {
 		PYTHON_PATH="/home/vasanth/anaconda3/bin/python"
 		GITTAG = sh(returnStdout:true, script:'git describe --exact-match $GIT_COMMIT || true').trim()
