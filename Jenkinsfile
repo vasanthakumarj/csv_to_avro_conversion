@@ -9,7 +9,7 @@ pipeline {
 			steps {
              			echo 'creating virtual env'
 				sh '${PYTHON_PATH} -m pip install --upgrade pipenv'
-				sh 'which pipenv'
+				sh 'ls /home/vasanth/anaconda3/bin/'
 				sh 'pipenv --python ${PYTHON_PATH} install --dev'
 				}
 			
