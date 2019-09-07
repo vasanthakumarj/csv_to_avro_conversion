@@ -18,7 +18,7 @@ pipeline {
 		stage('link checking') {
 			steps {
 				echo 'static analysis'
-				sh '${PIPENV} run python ${PYLINT} csv_to_avro_conversion/conversion.py'
+				sh '${PYLINT} csv_to_avro_conversion/conversion.py'
 			}
 		}
                 stage('create build') {
