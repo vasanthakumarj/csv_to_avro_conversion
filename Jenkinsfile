@@ -4,6 +4,7 @@ pipeline {
 		PYTHON_PATH="/home/vasanth/anaconda3/bin/python"
 		PIPENV="/home/vasanth/anaconda3/bin/pipenv"
 		GITTAG = sh(returnStdout:true, script:'git describe --exact-match $GIT_COMMIT || true').trim()
+		echo $GITTAG
 		}
 	stages {
 		stage('installing pipenv ') {
@@ -14,6 +15,12 @@ pipeline {
 				}
 			
 			}
+		stage('link checking') {
+			steps {
+				echo 'static analysis'
+				sh '${PIPENV} run python setup.py flake8'
+			}
+		}
                 stage('create build') {
 			steps {
 				echo 'create build'
