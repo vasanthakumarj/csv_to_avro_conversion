@@ -8,7 +8,7 @@ pipeline {
 		stage('installing pipenv ') {
 			steps {
              			echo 'creating virtual env'
-				sh '${PYTHON_PATH} -m pip install --upgrade --pipenv'
+				sh 'python -m pip install --upgrade --pipenv'
 				sh 'pipenv --python ${PYTHON_PATH} install --dev'
 				}
 			
