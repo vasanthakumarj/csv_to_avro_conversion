@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+csv_to_avro_conversion/__init__.py
+csv_to_avro_conversion/conversion.py
+csv_to_avro_conversion.egg-info/PKG-INFO
+csv_to_avro_conversion.egg-info/SOURCES.txt
+csv_to_avro_conversion.egg-info/dependency_links.txt
+csv_to_avro_conversion.egg-info/not-zip-safe
+csv_to_avro_conversion.egg-info/top_level.txt
