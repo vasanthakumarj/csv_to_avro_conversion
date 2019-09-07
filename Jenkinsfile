@@ -17,7 +17,7 @@ pipeline {
 		stage('link checking') {
 			steps {
 				echo 'static analysis'
-				sh '${PIPENV} run python setup.py flake8'
+				sh '${PIPENV} run python pylint csv_to_avro_conversion/conversion.py'
 			}
 		}
                 stage('create build') {
