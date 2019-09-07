@@ -1,4 +1,4 @@
-pipeline	{
+pipeline {
 	agents any
 	environment {
 		PYTHON_PATH="/home/vasanth/anaconda3/bin/python"
