@@ -3,6 +3,7 @@ pipeline {
 	environment {
 		PYTHON_PATH="/home/vasanth/anaconda3/bin/python"
 		PIPENV="/home/vasanth/anaconda3/bin/pipenv"
+		PYLINT="/home/vasanth/anaconda3/bin/pylint"
 		GITTAG = sh(returnStdout:true, script:'git describe --exact-match $GIT_COMMIT || true').trim()
 		}
 	stages {
@@ -17,7 +18,7 @@ pipeline {
 		stage('link checking') {
 			steps {
 				echo 'static analysis'
-				sh '${PIPENV} run python pylint csv_to_avro_conversion/conversion.py'
+				sh '${PIPENV} run python PYLINT csv_to_avro_conversion/conversion.py'
 			}
 		}
                 stage('create build') {
